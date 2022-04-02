@@ -13,6 +13,6 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.listen(PORT, () => {
-  console.log(`API server now on port ${PORT}!`);
+app.listen(process.env.PORT || 3000, function() {
+  console.log("sever is running on port 3000");
 });
